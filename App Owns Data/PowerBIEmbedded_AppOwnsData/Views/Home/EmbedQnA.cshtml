@@ -1,0 +1,82 @@
+﻿@model PowerBIEmbedded_AppOwnsData.Models.QnAEmbedConfig
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="https://npmcdn.com/es6-promise@3.2.1"></script>
+<script src="~/scripts/powerbi.js"></script>
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div id="errorWrapper">
+        <h2>
+            Error
+        </h2>
+        @Model.ErrorMessage
+    </div>
+
+    return;
+}
+@*<h2>Embedded Qna</h2>
+<div>
+    The following QnA is the first QnA found in the given dataset in given group. Please feel free to change the code to match your needs.
+</div>*@
+<div id="qnaContainer"></div>
+@if (string.IsNullOrEmpty(Model.EmbedUrl))
+{
+    return;
+}
+@*<div class="infoBox">
+    Code is in files:<br />
+    1) HomeController.cs<br />
+    2) EmbedQnA.cshtml
+</div>
+@Html.Partial("LiveDemoLink")*@
+<script>
+    // Read embed application token from Model
+    var accessToken = "@Model.EmbedToken.Token";
+
+    // Read embed URL from Model
+    var embedUrl = "@Html.Raw(Model.EmbedUrl)";
+
+    // Read dataset Id from Model
+    var embedDatasetIds = ["@Model.datasetId"];
+   
+
+    // Read question from Model
+    var embedQuestion = "@Model.question";
+
+    // Get models. models contains enums that can be used.
+    var models = window['powerbi-client'].models;
+
+    // Read QnA mode from Model
+    var embedViewMode = models.QnaMode.Interactive;
+
+    // Embed configuration used to describe the what and how to embed.
+    // This object is used when calling powerbi.embed.
+    // This also includes settings and options such as filters.
+    // You can find more information at https://github.com/Microsoft/PowerBI-JavaScript/wiki/Embed-Configuration-Details.
+    var config = {
+        type: 'qna',
+        tokenType: models.TokenType.Embed,
+        accessToken: accessToken,
+        embedUrl: embedUrl,
+        datasetIds: embedDatasetIds,
+        viewMode: embedViewMode,
+        question: embedQuestion
+    };
+
+    // Get a reference to the embedded tile HTML element
+    var qnaContainer = $('#qnaContainer')[0];
+
+    // Embed the qna and display it within the div container.
+    var qna = powerbi.embed(qnaContainer, config);
+
+    // qna.off removes a given event handler if it exists.
+    qna.off("loaded");
+
+    // qna.on will add an event handler which prints to Log window.
+    qna.on("loaded", function (event) {
+        console.log("QNA loaded event");
+        console.log(event.detail);
+    });
+</script>
