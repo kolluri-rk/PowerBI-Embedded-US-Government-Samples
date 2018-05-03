@@ -34,11 +34,14 @@ Microsoft has provided cloud configs for various tenant types in [App Owns Data]
 
 ## Embedding Q&A (for all tenant types)
 
+Find the demo here (http://cispowerbiembeddedapp.azurewebsites.net/Qna/EmbedQnA/Consumption)
+
 PowerBI Client has Dashboards, Reports, Tiles, Datasets properties and each of these properties expose **GenerateTokenInGroupAsync** method to generate token. And each Dashboard/Report/Tile has an **EembedUrl** property, which is required for embedding. 
 
 But PowerBI Client does not have Qnas property. Because, if you look at Generate token for Q&A (https://msdn.microsoft.com/library/mt784614.aspx#qanda), we need to generate token using Datasets property. All we are missing is, EmbedUrl for Qna. 
 
 To expose Qnas property on **PowerBiClient** and EmbedUrl property on Qna, I created an extension for `PowerBIClient` in [PowerBIEmbedded.Extensions project](https://github.com/kolluri-rk/PowerBI-Embedded-US-Government-Samples/tree/master/App%20Owns%20Data/PowerBIEmbedded.Extensions). This gives similar api style as `Microsoft.PowerBI.Api`.
+
 
 Gnerating token...
 
@@ -69,6 +72,9 @@ Then, we can use qna.EmbedUrl
 
 ## Credits
 
+[Madhu Chanthati](https://github.com/mchanthati) <br> 
+Madhu is a Data Scientist who architected & designed datawarehouse, built & trained BI models, and created Power BI dashboards, reports, tiles and Qnas on governmnet cloud. 
+
 Microsoft <br> 
 https://github.com/Microsoft/PowerBI-Developer-Samples <br>
 
@@ -76,7 +82,6 @@ Reza Rad <br>
 http://radacad.com/integrate-power-bi-into-your-application-part-1-register-your-app <br>
 http://radacad.com/integrate-power-bi-into-your-application-part-2-authenticate <br>
 http://radacad.com/integrate-power-bi-into-your-application-part-3-embed-content  <br>
-
 
 
 ## What's coming next
