@@ -38,7 +38,7 @@ PowerBI Client has Dashboards, Reports, Tiles, Datasets properties and each of t
 
 But PowerBI Client does not have Qnas property. Because, if you look at Generate token for Q&A (https://msdn.microsoft.com/library/mt784614.aspx#qanda), we need to generate token using Datasets property. All we are missing is, EmbedUrl for Qna. 
 
-To expose this property on Qna and to follow the Microsoft.PowerBI.Api style, I created an extension for Qna in PowerBIEmbedded.Extensions project (https://github.com/kolluri-rk/PowerBI-Embedded-US-Government-Samples/tree/master/App%20Owns%20Data/PowerBIEmbedded.Extensions). 
+To expose Qnas property on **PowerBiClient** and EmbedUrl property on Qna, I created an extension for `PowerBIClient` in [PowerBIEmbedded.Extensions project] (https://github.com/kolluri-rk/PowerBI-Embedded-US-Government-Samples/tree/master/App%20Owns%20Data/PowerBIEmbedded.Extensions). This gives similar api style as `Microsoft.PowerBI.Api`.
 
 Gnerating token...
 
