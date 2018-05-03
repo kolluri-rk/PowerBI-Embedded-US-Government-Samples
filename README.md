@@ -73,7 +73,7 @@ Then, we can use qna.EmbedUrl
 ## Credits
 
 [Madhu Chanthati](https://github.com/mchanthati) <br> 
-Madhu is a Data Scientist who architected & designed datawarehouse, built & trained BI models, and created Power BI dashboards, reports, tiles and Qnas on governmnet cloud. 
+Madhu is a Data Scientist who architected & designed data warehouse, built & trained BI models, and created Power BI dashboards, reports, tiles and Qnas on government cloud. 
 
 Microsoft <br> 
 https://github.com/Microsoft/PowerBI-Developer-Samples <br>
