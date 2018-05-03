@@ -1,4 +1,4 @@
-# PowerBI Embedded for US Government cloud and embedding Q&A (for all tenant types)
+# Power BI Embedded for US Government cloud and embedding Q&A (for all tenant types)
 This demonstrates how to use Power BI embedded in US Goverment cloud and how to embed Q&A. This is an extended sample of Microsoft's **[App Owns Data](https://github.com/Microsoft/PowerBI-Developer-Samples)**. 
 
 ## US Government power-bi embedded
