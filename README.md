@@ -1,5 +1,5 @@
 # Power BI Embedded for US Government cloud and embedding Q&A (for all tenant types)
-This demonstrates how to use Power BI embedded in US Goverment cloud and how to embed Q&A. This is an extended sample of Microsoft's **[App Owns Data](https://github.com/Microsoft/PowerBI-Developer-Samples)**. 
+This demonstrates how to use Power BI embedded in US Government cloud and how to embed Q&A. This is an extended sample of Microsoft's **[App Owns Data](https://github.com/Microsoft/PowerBI-Developer-Samples)**. 
 
 ## US Government power-bi embedded
 1. Follow the steps described in https://docs.microsoft.com/en-us/power-bi/developer/embedding-content. I have listed more links in credits section to refer.
@@ -17,7 +17,7 @@ This demonstrates how to use Power BI embedded in US Goverment cloud and how to 
 ![Group Id/Worksapce Id](https://github.com/kolluri-rk/PowerBI-Embedded-US-Government-Samples/blob/master/images-for-readme/groupid-worksapceid.PNG "Group Id/Worksapce Id")
 
 
-4. You need to make sure to have below settings in `Cloud.config`. These are specific to `US Goverment cloud`.
+4. You need to make sure to have below settings in `Cloud.config`. These are specific to `US Government cloud`.
 
 | Settings Key | Settings Value                                               |
 | ------------ | ------------------------------------------------------------ |
